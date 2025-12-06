@@ -3,15 +3,19 @@
 
 class Shape {
 public:
-    int enableCubes[3][3][3];  
-    int size;                   
-    int color;                  
+	int enableCubes[3][3][3];
+	int size;
+	int color;
 
-    Shape();
-    virtual ~Shape();
+	Shape();
+	virtual ~Shape();
 
-    void createShape();        
-    void drawShape(float x, float y, float z);  
+	void initShape();
+	void createShape();
+	void drawShape(int d, float x, float y, float z, int leftRight_rotation, int upDown_x, int upDown_z);
+	void rotateShape_x();
+	void rotateShape_y();
+	void rotateShape_z();
 };
 
 #endif /* SHAPE_H_ */
